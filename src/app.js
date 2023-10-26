@@ -54,7 +54,7 @@ app.get('/weather', (req, res) => {
             return res.send({ error })
         }
     
-        forecast(latitude, longitude, (error, { description, temperature, unit, feelslike }) => {
+        forecast(latitude, longitude, (error, { description, descImg, temperature, unit, feelslike }) => {
             if(error) {
                 return res.send({ error })
             }
@@ -65,6 +65,7 @@ app.get('/weather', (req, res) => {
                 forecast: 'It is currently ' + description + '. The temperature is ' + temperature + unit + ' and feels like ' + feelslike + unit,
                 forecastData: {
                     description,
+                    descImg,
                     temperature,
                     unit,
                     feelslike

@@ -11,6 +11,7 @@ const forecast = (longitude, latitude, callback) => {
         } else {
             callback(undefined, {
                 description: body.current.weather_descriptions[0],
+                descImg: body.current.weather_icons[0],
                 unit: body.request.unit.toUpperCase(),
                 temperature: body.current.temperature,
                 feelslike: body.current.feelslike
