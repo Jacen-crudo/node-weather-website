@@ -70,3 +70,43 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #888888;
 }
+
+/* START RESPONSIVE CSS */
+
+/* Original CSS styles for desktop screens */
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+    body {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+    
+    h1 {
+        font-size: 48px;
+    }
+    
+    .portrait {
+        width: 200px;
+    }
+    
+    header a {
+        margin-right: 10px;
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+    
+    .portrait {
+        width: 150px;
+    }
+    
+    header {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
